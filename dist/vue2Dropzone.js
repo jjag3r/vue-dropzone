@@ -216,7 +216,7 @@
                     e.success ? (o.s3ObjectLocation = e.message, setTimeout(function() {
                         n.dropzone.emit("success", o, 'responseText', e);
                         n.dropzone.emit("complete", o);
-                    }), n.$emit("vdropzone-s3-upload-success", e.message)) : "undefined" != typeof message ? n.$emit("vdropzone-s3-upload-error", e.message) : n.$emit("vdropzone-s3-upload-error", "Network Error : Could not send request to AWS. (Maybe CORS error)")
+                    }), n.$emit("vdropzone-s3-upload-success", e.message, o)) : "undefined" != typeof message ? n.$emit("vdropzone-s3-upload-error", e.message) : n.$emit("vdropzone-s3-upload-error", "Network Error : Could not send request to AWS. (Maybe CORS error)")
                 }).catch(function(e) {
                     alert(e)
                 })
