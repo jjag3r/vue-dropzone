@@ -29,6 +29,7 @@
         },
         sendFile: function(e, o, vue) {
             var n = new FormData;
+            n.append('Content-Type', e.type);
             return this.getSignedURL(e, o).then(function(o) {
                 var t = o.signature;
                 return Object.keys(t).forEach(function(e) {
